@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker exec -it pdflatex pdflatex --shell-escape presentation.tex
+docker exec -it pdflatex pdflatex --shell-escape presentation.tex
+rm -f *.out *.lof *.lot *.fdb_latexmk *.aux *.bbl *.bcf *.blg *.fls *.log *.run.xml *.toc *.synctex.gz *.dvi *.aux *.fdb_latexmk *.fls *.nav *.snm

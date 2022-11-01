@@ -1,0 +1,97 @@
+\documentclass{beamer}
+
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{lmodern}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breaklines=true,
+  postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
+}
+
+% ---------- Personalized commands ------------- %
+\newcommand{\theauthor}{%
+    \parbox{2.5cm} {%
+        \begin{tikzpicture}
+            \clip (0,0) circle (1);
+            \node at (0,0) {\includegraphics[width=2cm]{./assets/pedro.png}};
+        \end{tikzpicture}
+        \centering Pedro Ribeiro\\a85493
+    }%
+}%
+
+\usetheme{Berkeley}
+% \usetheme{Hannover}
+
+\title{Project title}
+% \author{Pedro Ribeiro}
+
+% \author[Pedro Ribeiro]{
+%     \parbox{2.5cm} {%
+%         \begin{tikzpicture}
+%             % \clip (0,0) circle (1);
+%             % \node at (0,0) {\includegraphics[width=2cm]{./assets/pedro.png}};
+%             \includegraphics[width=2cm]{./assets/pedro.png};
+%         \end{tikzpicture}
+%         \centering Pedro Ribeiro\\a85493
+%     }%
+% }
+% \author[{a, \protect\includegraphics[width=0.4cm]{./assets/pedro}}]{denis cousineau}
+
+
+
+\begin{document}
+
+\author[Pedro Ribeiro]{
+    \parbox{2.5cm}{%
+        \begin{tikzpicture}
+            \clip (0,0) circle(1);
+            \node at (0,0) {\includegraphics[width=2cm]{./assets/pedro.png}};
+        \end{tikzpicture}
+        \centering Pedro Ribeiro\\a85493
+    }%
+}
+
+
+\subtitle{\tiny{Short project description}}
+
+\institute{Institution - Departament or subdepartment}
+
+\date{\today}
+
+\logo{\includegraphics[width=1cm]{./assets/uminho_logo.png}}
+
+% Cover
+\begin{frame}
+    \frametitle{Project Description}
+    \titlepage
+\end{frame}
+
+% Table of contents
+\import{./}{slides/table_of_contents.tex}
+
+% Introduction 
+\section{Introduction}
+\import{./}{slides/01-introduction.tex}
+
+% Body 
+\section{Body}
+\import{./}{slides/02-body.tex}
+
+% Conclusion
+\section{Conclusion}
+\import{./}{slides/03-conclusion.tex}
+
+\end{document}
