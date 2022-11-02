@@ -21,36 +21,9 @@
   postbreak=\raisebox{0ex}[0ex][0ex]{\color{red}$\hookrightarrow$\space}
 }
 
-% ---------- Personalized commands ------------- %
-\newcommand{\theauthor}{%
-    \parbox{2.5cm} {%
-        \begin{tikzpicture}
-            \clip (0,0) circle (1);
-            \node at (0,0) {\includegraphics[width=2cm]{./assets/pedro.png}};
-        \end{tikzpicture}
-        \centering Pedro Ribeiro\\a85493
-    }%
-}%
-
 \usetheme{Berkeley}
-% \usetheme{Hannover}
 
-\title{Project title}
-% \author{Pedro Ribeiro}
-
-% \author[Pedro Ribeiro]{
-%     \parbox{2.5cm} {%
-%         \begin{tikzpicture}
-%             % \clip (0,0) circle (1);
-%             % \node at (0,0) {\includegraphics[width=2cm]{./assets/pedro.png}};
-%             \includegraphics[width=2cm]{./assets/pedro.png};
-%         \end{tikzpicture}
-%         \centering Pedro Ribeiro\\a85493
-%     }%
-% }
-% \author[{a, \protect\includegraphics[width=0.4cm]{./assets/pedro}}]{denis cousineau}
-
-
+\title{Configuração \textit{Zero Touch}}
 
 \begin{document}
 
@@ -58,16 +31,16 @@
     \parbox{2.5cm}{%
         \begin{tikzpicture}
             \clip (0,0) circle(1);
-            \node at (0,0) {\includegraphics[width=2cm]{./assets/pedro.png}};
+            \node at (0,0) {\includegraphics[width=2cm]{./assets/pedro.jpg}};
         \end{tikzpicture}
         \centering Pedro Ribeiro\\a85493
     }%
 }
 
 
-\subtitle{\tiny{Short project description}}
+\subtitle{\tiny{Apresentação do projeto da dissertação de mestrado}}
 
-\institute{Institution - Departament or subdepartment}
+\institute{Universidade do Minho - Escola de Engenharia}
 
 \date{\today}
 
@@ -75,23 +48,45 @@
 
 % Cover
 \begin{frame}
-    \frametitle{Project Description}
+    \frametitle{Dissertação de mestrado}
     \titlepage
 \end{frame}
 
 % Table of contents
 \import{./}{slides/table_of_contents.tex}
 
-% Introduction 
-\section{Introduction}
-\import{./}{slides/01-introduction.tex}
+% Introdução
+\section{Introdução}
+\import{./}{slides/01-introducao.tex}
 
-% Body 
-\section{Body}
-\import{./}{slides/02-body.tex}
+% Estado de arte 
+\section{Estado de arte}
+\import{./}{slides/02-estado-de-arte.tex}
 
-% Conclusion
-\section{Conclusion}
-\import{./}{slides/03-conclusion.tex}
+% Prototipo de arquitetura
+\section{Prototipo de arquitetura}
+\import{./}{slides/03-prototipo-de-arquitetura.tex}
+
+% Gestao de filas de espera no ZTP
+\section{Gestao de filas de espera no ZTP}
+\import{./}{slides/04-gestao-de-filas.tex}
+
+% Rule Matcher
+\section{Rule Matcher}
+\import{./}{slides/05-rule-matcher.tex}
+
+% Seguranca
+\section{Seguranca}
+\import{./}{slides/06-seguranca.tex}
+
+% Monitorizacao
+\section{Monitorizacao}
+\import{./}{slides/07-monitorizacao.tex}
+
+% Conclusao
+\section{Conclusao}
+\import{./}{slides/08-conclusao.tex}
+
+
 
 \end{document}
