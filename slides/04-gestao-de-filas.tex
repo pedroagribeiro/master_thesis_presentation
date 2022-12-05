@@ -30,22 +30,36 @@
 \begin{frame}
     \frametitle{Tempo total de simulação em função do número de \textit{workers} (em \textit{ms})}
     \begin{figure}
+        \small
         \centering
           \begin{tikzpicture}
             \begin{axis}[
+              style={
+                nodes={
+                  scale=0.7,
+                  transform shape
+                }
+              },
               xlabel={Número de \textit{workers}},
               ylabel={Tempo total de simulação},
               xmin=4, xmax=24,
               ymin=0, ymax=120000,
               xtick={4, 8, 12, 16, 20, 24},
               ytick={0, 20000, 40000, 60000, 80000, 100000, 120000},
-              legend style={ at={(1.03, 1)},
-                anchor=north west, draw=black,
-                fill=white, align=left},
+              legend style={ 
+                nodes={
+                  scale=0.8,
+                  transform shape
+                },
+                at={(1.03, 1)},
+                scale=0.05,
+                anchor=north west,
+                align=left
+              },
               cycle list name=black white,
               ymajorgrids=true,
               smooth,
-              width=0.6\textwidth
+              width=0.7\textwidth
             ]
       
               \addplot coordinates {
@@ -80,19 +94,32 @@
         \centering
             \begin{tikzpicture}
       \begin{axis}[
+        style={
+          nodes={
+            scale=0.7,
+            transform shape
+          }
+        },
         xlabel={Número de \textit{workers}},
         ylabel={Número de \textit{timeouts} ocorridos},
         xmin=4, xmax=24,
         ymin=0, ymax=90,
         xtick={4, 8, 12, 16, 20, 24},
         ytick={0, 10, 20, 30, 40, 50, 60, 70, 80, 90},
-        legend style={ at={(1.03, 1)},
-          anchor=north west, draw=black,
-          fill=white, align=left},
+        legend style={
+          nodes={
+            scale=0.8,
+            transform shape
+          },
+          at={(1.03, 1)},
+          scale=0.05,
+          anchor=north west,
+          align=left
+        },
         cycle list name=black white,
         ymajorgrids=true,
         smooth,
-        width=0.6\textwidth
+        width=0.7\textwidth
       ]
   
         \addplot coordinates {
