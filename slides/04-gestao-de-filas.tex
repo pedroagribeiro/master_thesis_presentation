@@ -26,6 +26,18 @@
     \end{figure}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Ambiente de simulação}
+    \begin{itemize}
+      \item Fornece um método de comparação objetivo entre as propostas de arquitetura apresentadas.
+      \item As métricas que determinam a comparação entre as alternativas são:
+      \begin{itemize}
+        \item Tempo total de simulação
+        \item Número de \textit{timeouts} ocorridos.
+      \end{itemize}  
+    \end{itemize}  
+\end{frame}  
+
 % explicar os ensais que foram feitos e em que condições
 \begin{frame}
     \frametitle{Tempo total de simulação em função do número de \textit{workers} (em \textit{ms})}
@@ -154,11 +166,23 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tipos de mensagens emuladas}
+    \frametitle{Tipos e sequências de mensagens emuladas}
+    \textbf{Sequência de mensagens do tipo 1}
     \begin{itemize}
-        \item Tipo de mensagem 1
-        \item Tipo de mensagem 2
-        \item Tipo de mensagem 3
-        \item Mostrar os gráficos de cada simulação?
-    \end{itemize}    
+      \item 100\% mensagens do tipo 1
+    \end{itemize}  
+    \textbf{Sequência de mensagens do tipo 2}
+    \begin{itemize}
+      \item 10\% mensagens do tipo 2 + 90\% mensagens do tipo 1
+    \end{itemize}  
+    \textbf{Sequência de mensagens do tipo 3}
+    \begin{itemize}
+      \item 10\% mensagens do tipo 3 + 10\% mensagens do tipo 2 + 80\% mensagens do tipo 1
+    \end{itemize}
+    \textit{Tipos de mensagens}
+    \begin{itemize}
+      \item \textbf{Tipo 1:} \texttt{t} << \texttt{timeout}
+      \item \textbf{Tipo 2:} \texttt{t} \textless  \texttt{timeout}
+      \item \textbf{Tipo 3:} \texttt{t} >> \texttt{timeout}
+    \end{itemize}  
 \end{frame}    
